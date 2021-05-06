@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/giftListFragment">
+    <fragment
+        android:id="@+id/giftListFragment"
+        android:name="com.rapps.testrollingglory.ui.listGift.GiftListFragment"
+        android:label="fragment_gift_list"
+        tools:layout="@layout/fragment_gift_list" >
+        <action
+            android:id="@+id/action_giftListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.rapps.testrollingglory.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="giftId"
+            app:argType="string" />
+    </fragment>
+</navigation>
